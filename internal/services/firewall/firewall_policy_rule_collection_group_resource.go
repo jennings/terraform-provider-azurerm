@@ -111,6 +111,7 @@ func resourceFirewallPolicyRuleCollectionGroup() *pluginsdk.Resource {
 													ValidateFunc: validation.StringInSlice([]string{
 														string(network.FirewallPolicyRuleApplicationProtocolTypeHTTP),
 														string(network.FirewallPolicyRuleApplicationProtocolTypeHTTPS),
+														string("Mssql"),
 													}, false),
 												},
 												"port": {

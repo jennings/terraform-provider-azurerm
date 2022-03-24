@@ -504,6 +504,10 @@ resource "azurerm_firewall_policy_rule_collection_group" "test" {
         type = "Https"
         port = 443
       }
+      protocols {
+        type = "Mssql"
+        port = 1433
+      }
       source_addresses      = ["10.0.0.1"]
       destination_addresses = ["10.0.0.1"]
       destination_urls      = ["www.google.com/en"]
@@ -778,6 +782,10 @@ resource "azurerm_firewall_policy_rule_collection_group" "test" {
       protocols {
         type = "Https"
         port = 443
+      }
+      protocols {
+        type = "Mssql"
+        port = 1433
       }
       source_addresses      = ["10.0.0.1"]
       destination_addresses = ["10.0.0.1"]
