@@ -1670,7 +1670,7 @@ func StickySettingsSchema() *pluginsdk.Schema {
 		Elem: &pluginsdk.Resource{
 			Schema: map[string]*pluginsdk.Schema{
 				"app_setting_names": {
-					Type:     pluginsdk.TypeList,
+					Type:     pluginsdk.TypeSet,
 					MinItems: 1,
 					Optional: true,
 					Elem: &pluginsdk.Schema{
@@ -1684,7 +1684,7 @@ func StickySettingsSchema() *pluginsdk.Schema {
 				},
 
 				"connection_string_names": {
-					Type:     pluginsdk.TypeList,
+					Type:     pluginsdk.TypeSet,
 					MinItems: 1,
 					Optional: true,
 					Elem: &pluginsdk.Schema{
@@ -1708,7 +1708,7 @@ func StickySettingsComputedSchema() *pluginsdk.Schema {
 		Elem: &pluginsdk.Resource{
 			Schema: map[string]*pluginsdk.Schema{
 				"app_setting_names": {
-					Type:     pluginsdk.TypeList,
+					Type:     pluginsdk.TypeSet,
 					Computed: true,
 					Elem: &pluginsdk.Schema{
 						Type: pluginsdk.TypeString,
@@ -1716,7 +1716,7 @@ func StickySettingsComputedSchema() *pluginsdk.Schema {
 				},
 
 				"connection_string_names": {
-					Type:     pluginsdk.TypeList,
+					Type:     pluginsdk.TypeSet,
 					Computed: true,
 					Elem: &pluginsdk.Schema{
 						Type: pluginsdk.TypeString,

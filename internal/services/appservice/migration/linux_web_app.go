@@ -1679,7 +1679,7 @@ func (l LinuxWebAppV0toV1) Schema() map[string]*pluginsdk.Schema {
 			Elem: &pluginsdk.Resource{
 				Schema: map[string]*pluginsdk.Schema{
 					"app_setting_names": {
-						Type:     pluginsdk.TypeList,
+						Type:     pluginsdk.TypeSet,
 						MinItems: 1,
 						Optional: true,
 						Elem: &pluginsdk.Schema{
@@ -1688,7 +1688,7 @@ func (l LinuxWebAppV0toV1) Schema() map[string]*pluginsdk.Schema {
 					},
 
 					"connection_string_names": {
-						Type:     pluginsdk.TypeList,
+						Type:     pluginsdk.TypeSet,
 						MinItems: 1,
 						Optional: true,
 						Elem: &pluginsdk.Schema{
